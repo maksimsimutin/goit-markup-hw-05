@@ -126,6 +126,8 @@ header .container {
   text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -135,10 +137,12 @@ header .container {
 
 .icon-mail {
   margin-right: 10px;
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-phon {
   margin-right: 10px;
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover .icon-mail,
@@ -171,6 +175,8 @@ header .container {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-weight: 500;
+  
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link.logo-color {
@@ -259,7 +265,6 @@ header .container {
   cursor: pointer;
   background-color: var(--quaternary-color);
   color: var(--tertiary-color);
-
   transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -478,6 +483,7 @@ header .container {
 /*Social list link*/
 
 .social-list {
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -490,17 +496,22 @@ header .container {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  fill: var(--social-primary)
+  transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--quaternary-color);
-  fill: var(--primary-color);
 }
-
+.social-icon {
+  fill: var(--social-primary);
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--primary-color);
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+}
 .social-item {
-  margin-top: 16px;
   margin-right: 10px;
 }
 
@@ -534,6 +545,7 @@ header .container {
   border: 1px solid #AFB1B8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item {
@@ -546,6 +558,7 @@ header .container {
 
 .client-icon {
   fill: var(--social-primary);
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -560,7 +573,7 @@ header .container {
 
  .client-link:hover .client-icon,
  .client-link:focus .client-icon {
-  border-color: var(--quaternary-color);
+  border-color: var(--quaternary-color);  
 }
 
 /*Footer*/
@@ -580,6 +593,7 @@ footer {
 }
 
 .logo-footer { 
+  display: block;
   margin-bottom: 20px; 
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -602,6 +616,7 @@ footer {
   display: block;
   text-decoration: none;
   color: var(--primary-color);
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-map:hover,
@@ -614,6 +629,7 @@ footer {
   margin-top: 9px;
   text-decoration: none;
   color: rgba(225, 225, 225, 0.6);
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -654,6 +670,7 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -703,6 +720,10 @@ footer {
   height: 38px;
   border-radius: 4px;
   padding: 6px 22px;
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
+  background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow  var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .portfolio-btn:hover,
@@ -744,14 +765,14 @@ footer {
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-
   list-style: none;
 }
 
 .portfolio-list .item{
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
-  margin-left: 30px; 
+  margin-left: 30px;
+  transition: box-shadow  var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 
@@ -765,6 +786,7 @@ footer {
 .link-img {
   text-decoration: none;
   color: var(--text-primary);
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .link-img:hover,
@@ -823,7 +845,7 @@ footer {
  letter-spacing: 0.03em;
  background: rgba(33, 150, 243, 0.9);
  color: var(--primary-color);
- transform: translateY(100%);
+ transform: translateY(101%);
  transition: transform var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
   
